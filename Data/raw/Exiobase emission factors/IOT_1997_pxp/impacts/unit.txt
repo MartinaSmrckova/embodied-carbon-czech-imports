@@ -1,0 +1,127 @@
+impact	unit
+Value Added	M.EUR
+Employment	1000 p.
+Employment hour	hr
+GHG emissions (GWP100) | Problem oriented approach: baseline (CML, 2001) | GWP100 (IPCC, 2007)	kg CO2 eq.
+Human toxicity (USEtox) | USEtox2008 | CTUh (Rosenbaum et al., 2008)	cases
+Fresh water Ecotoxicity (USEtox) | USEtox2008 | CTUe (Rosenbaum et al., 2008)	PAF m3.day
+EPS | Damage Approach | EPS (Steen, 1999))	elu
+Carcinogenic effects on humans (H.A) | ECOINDICATOR 99 (H.A) | Carcinogenic effects on humans (H.A)	DALY
+Respiratory effects on humans caused by organic substances (H.A) | ECOINDICATOR 99 (H.A) | Respiratory effects on humans caused by organic substances (H.A)	DALY
+Respiratory effects on humans caused by inorganic substances (H.A) | ECOINDICATOR 99 (H.A) | Respiratory effects on humans caused by inorganic substances (H.A)	DALY
+Damages to human health caused by climate change (H.A) | ECOINDICATOR 99 (H.A) | Damages to human health caused by climate change (H.A)	DALY
+Damage to Ecosystem Quality caused by ecotoxic emissions (H.A) | ECOINDICATOR 99 (H.A) | Damage to Ecosystem Quality caused by ecotoxic emissions (H.A)	PDF*m2*yr
+Damage to Ecosystem Quality caused by the combined effect of acidification and eutrophication (H.A) | ECOINDICATOR 99 (H.A) | Damage to Ecosystem Quality caused by the combined effect of acidification and eutrophication (H.A)	PDF*m2*yr
+Carcinogenic effects on humans (E.E) | ECOINDICATOR 99 (E.E) | Carcinogenic effects on humans (E.E)	DALY
+Respiratory effects on humans caused by organic substances (E.E) | ECOINDICATOR 99 (E.E) | Respiratory effects on humans caused by organic substances (E.E)	DALY
+Respiratory effects on humans caused by inorganic substances (E.E) | ECOINDICATOR 99 (E.E) | Respiratory effects on humans caused by inorganic substances (E.E)	DALY
+Damages to human health caused by climate change (E.E) | ECOINDICATOR 99 (E.E) | Damages to human health caused by climate change (E.E)	DALY
+Damage to Ecosystem Quality caused by ecotoxic emissions (E.E)) | ECOINDICATOR 99 (E.E) | Damage to Ecosystem Quality caused by ecotoxic emissions (E.E))	PDF*m2*yr
+Damage to Ecosystem Quality caused by the combined effect of acidification and eutrophication (E.E) | ECOINDICATOR 99 (E.E) | Damage to Ecosystem Quality caused by the combined effect of acidification and eutrophication (E.E)	PDF*m2*yr
+Carcinogenic effects on humans (I.I) | ECOINDICATOR 99 (I.I) | Carcinogenic effects on humans (I.I)	DALY
+Respiratory effects on humans caused by organic substances (I.I) | ECOINDICATOR 99 (I.I) | Respiratory effects on humans caused by organic substances (I.I)	DALY
+Respiratory effects on humans caused by inorganic substances (I.I) | ECOINDICATOR 99 (I.I) | Respiratory effects on humans caused by inorganic substances (I.I)	DALY
+Damages to human health caused by climate change (I.I) | ECOINDICATOR 99 (I.I) | Damages to human health caused by climate change (I.I)	DALY
+Damage to Ecosystem Quality caused by ecotoxic emissions (I.I) | ECOINDICATOR 99 (I.I) | Damage to Ecosystem Quality caused by ecotoxic emissions (I.I)	PDF*m2*yr
+Damage to Ecosystem Quality caused by the combined effect of acidification and eutrophication (I.I) | ECOINDICATOR 99 (I.I) | Damage to Ecosystem Quality caused by the combined effect of acidification and eutrophication (I.I)	PDF*m2*yr
+Unused Domestic Extraction	kt
+Water Consumption Green - Agriculture	Mm3
+Water Consumption Blue - Agriculture	Mm3
+Water Consumption Blue - Livestock	Mm3
+Water Consumption Blue - Manufacturing	Mm3
+Water Consumption Blue - Electricity	Mm3
+Water Consumption Blue - Domestic	Mm3
+Water Consumption Blue - Total	Mm3
+Water Withdrawal Blue - Manufacturing	Mm3
+Water Withdrawal Blue - Electricity	Mm3
+Water Withdrawal Blue - Domestic	Mm3
+Water Withdrawal Blue - Total	Mm3
+Carbon dioxide (CO2) IPCC categories 1 to 4 and 6 to 7 (excl land use, land use change and forestry)	Gg
+Methane (CH4) IPCC categories 1 to 4 and 6 to 7 (excl land use, land use change and forestry)	Gg
+Nitrous Oxide (N2O) IPCC categories 1 to 4 and 6 to 7 (excl land use, land use change and forestry)	Gg
+Carbon dioxide (CO2) CO2EQ IPCC categories 1 to 4 and 6 to 7 (excl land use, land use change and forestry)	Gg CO2-eq
+Methane (CH4) CO2EQ IPCC categories 1 to 4 and 6 to 7 (excl land use, land use change and forestry)	Gg CO2-eq
+Nitrous Oxide (N2O) CO2EQ IPCC categories 1 to 4 and 6 to 7 (excl land use, land use change and forestry)	Gg CO2-eq
+Carbon dioxide (CO2) Fuel combustion and cement	Gg
+Carbon dioxide (CO2) Fuel combustion	Gg
+GHG emissions (GWP100) | Problem oriented approach: baseline (CML, 1999) | GWP100 (IPCC, 2007)	kg CO2 eq.
+GHG emissions (GWP100min) | Problem oriented approach: non baseline (CML, 1999) | net GWP100 min(Houghton et al., 2001)	kg CO2 eq.
+GHG emissions (GWP100max) | Problem oriented approach: non baseline (CML, 1999) | net GWP100 max(Houghton et al., 2001)	kg CO2 eq.
+GHG emissions (GWP20) | Problem oriented approach: non baseline (CML, 1999) | GWP20 (IPCC, 2007)	kg CO2 eq.
+GHG emissions (GWP500) | Problem oriented approach: non baseline (CML, 1999) | GWP500 (IPCC, 2007)	kg CO2 eq.
+ozone layer depletion (ODP steady state) | Problem oriented approach: baseline (CML, 1999) | ODP steady state (WMO, 2003)	kg CFC-11 eq.
+human toxicity (HTP inf) | Problem oriented approach: baseline (CML, 1999) | HTP inf. (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Freshwater aquatic ecotoxicity (FAETP inf) | Problem oriented approach: baseline (CML, 1999) | FAETP inf. (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Marine aquatic ecotoxicity (MAETP inf) | Problem oriented approach: baseline (CML, 1999) | MAETP inf. (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Freshwater sedimental ecotoxicity (FSETP inf) | Problem oriented approach: non baseline (CML, 1999) | FSETP inf. (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Marine sedimental ecotoxicity (MSETP inf) | Problem oriented approach: non baseline (CML, 1999) | MSETP inf. (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Terrestrial ecotoxicity (TETP inf) | Problem oriented approach: baseline (CML, 1999) | TETP inf.(Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+human toxicity (HTP20) | Problem oriented approach: non baseline (CML, 1999) | HTP 20 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Freshwater aquatic ecotoxicity (FAETP20) | Problem oriented approach: non baseline (CML, 1999) | FAETP 20 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Marine aquatic ecotoxicity (MAETP20) | Problem oriented approach: non baseline (CML, 1999) | MAETP 20 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Freshwater sedimental ecotoxicity (FSETP20) | Problem oriented approach: non baseline (CML, 1999) | FSETP 20 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Marine sedimental ecotoxicity (MSETP20) | Problem oriented approach: non baseline (CML, 1999) | MSETP 20 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Terrestrial ecotoxicity (TETP20) | Problem oriented approach: non baseline (CML, 1999) | TETP 20 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+human toxicity (HTP100) | Problem oriented approach: non baseline (CML, 1999) | HTP 100 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Freshwater aquatic ecotoxicity (FAETP100) | Problem oriented approach: non baseline (CML, 1999) | FAETP 100 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Marine aquatic ecotoxicity (MAETP100) | Problem oriented approach: non baseline (CML, 1999) | MAETP 100 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Freshwater sedimental ecotoxicity (FSETP100) | Problem oriented approach: non baseline (CML, 1999) | FSETP 100 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Marine sedimental ecotoxicity (MSETP100) | Problem oriented approach: non baseline (CML, 1999) | MSETP 100 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Terrestrial ecotoxicity (TETP100) | Problem oriented approach: non baseline (CML, 1999) | TETP 100 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+human toxicity (HTP500) | Problem oriented approach: non baseline (CML, 1999) | HTP 500 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Freshwater aquatic ecotoxicity (FAETP500) | Problem oriented approach: non baseline (CML, 1999) | FAETP 500 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Marine aquatic ecotoxicity (MAETP500) | Problem oriented approach: non baseline (CML, 1999) | MAETP 500 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Freshwater sedimental ecotoxicity (FSETP500) | Problem oriented approach: non baseline (CML, 1999) | FSETP 500 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Marine sedimental ecotoxicity (MSETP500) | Problem oriented approach: non baseline (CML, 1999) | MSETP 500 (Huijbregts, 1999 & 2000)	kg 1,4-dichlorobenzene eq.
+Terrestrial ecotoxicity (TETP500) | Problem oriented approach: non baseline (CML, 1999) | TETP 500 (Huijbregts, 1999 & 2000) TETP 500	kg 1,4-dichlorobenzene eq.
+photochemical oxidation (high NOx) | Problem oriented approach: baseline (CML, 1999) | POCP (Jenkin & Hayman, 1999; Derwent et al. 1998; high NOx)	kg ethylene eq.
+photochemical oxidation (low NOx) | Problem oriented approach: non baseline (CML, 1999) | POCP (Andersson-Skï¿½ld et al. 1992; low NOx)	kg ethylene eq.
+photochemical oxidation (MIR; very high NOx) | Problem oriented approach: non baseline (CML, 1999) | MIR 1997; very high NOx (Carter, 1994, 1997, 1998;Carter, Pierce, Luo &  Malkina, 1995 )	kg formed ozone
+photochemical oxidation (MOIR; high NOx) | Problem oriented approach: non baseline (CML, 1999) | MOIR; high NOx (Carter, 1994, 1997, 1998;Carter, Pierce, Luo &  Malkina, 1995 )	kg formed ozone
+photochemical oxidation (EBIR; low NOx) | Problem oriented approach: non baseline (CML, 1999) | EBIR; low NOx (Carter, 1994, 1997, 1998;Carter, Pierce, Luo &  Malkina, 1995 )	kg formed ozone
+acidification (incl. fate, average Europe total, A&B) | Problem oriented approach: baseline (CML, 1999) | AP ( Huijbregts, 1999; average Europe total, A&B)	kg SO2 eq.
+acidification (fate not incl.) | Problem oriented approach: non baseline (CML, 1999) | AP (Hauschild & Wenzel (1998).	kg SO2 eq.
+eutrophication (fate not incl.) | Problem oriented approach: baseline (CML, 1999) | EP (Heijungs et al. 1992))	kg PO4--- eq.
+eutrophication (incl. fate, average Europe total, A&B) | Problem oriented approach: non baseline (CML, 1999) | EP ( Huijbregts, 1999; average Europe total, A&B)	kg NOx eq.
+odour | Problem oriented approach: non baseline (CML, 1999) | 1/OTV	m3
+Climate change midpoint | ILCD recommended CF | Global warming potential 100 years	kg CO2-Equivalents
+Climate change endpoint, human health | ILCD recommended CF | Disability Adjusted Life Years (DALY)	DALY
+Climate change endpoint, ecosystems | ILCD recommended CF | Potentially Disappeared Fraction of species (PDF)	PDF
+Human toxicity midpoint, cancer effects | ILCD recommended CF | Comparative Toxic Unit for human (CTUh)	CTUh/kg = cases
+Human toxicity midpoint, non-cancer effects | ILCD recommended CF | Comparative Toxic Unit for human (CTUh)	CTUh = cases
+Human toxicity endpoint, cancer effects | ILCD recommended CF | Disability Adjusted Life Years (DALY)	DALY
+Human toxicity endpoint, non-cancer effects | ILCD recommended CF | Disability Adjusted Life Years (DALY)	DALY
+Particulate matter/Respiratory inorganics midpoint | ILCD recommended CF | emission-weighed average PM2.5 equivalent	kg PM2.5-eq
+Particulate matter/Respiratory inorganics endpoint | ILCD recommended CF | Disability Adjusted Life Years (DALY)	DALY
+Photochemical ozone formation midpoint, human health | ILCD recommended CF | Photochemical ozone creation potential (POCP)	kg-C2H4 equivalents
+Photochemical ozone formation endpoint, human health | ILCD recommended CF | Disability Adjusted Life Years (DALY)	DALY
+Acidification midpoint | ILCD recommended CF | Accumulated Exceedance (AE)	Accumulated Exceedance (AE)
+Acidification endpoint | ILCD recommended CF | Change in potentially not occuring fraction of plant species per change in base saturation	PDF
+Eutrophication terrestrial midpoint | ILCD recommended CF | Accumulated Exceedance (AE)	Accumulated Exceedance (AE)
+Eutrophication marine midpoint | ILCD recommended CF | Potentially Disappeared Fraction of species (PDF)	kg-N equivalent
+Ecotoxicity freshwater midpoint | ILCD recommended CF | Comparative Toxic Unit for ecosystems (CTUe)	CTUe = PAF.m3.year
+Ecotoxicity freshwater endpoint | ILCD recommended CF | Potentially Disappeared Fraction of species (PDF)	PDF.m3.year
+GHG emissions AR5 (GWP100) | GWP100 (IPCC, 2010)	kg CO2 eq.
+Nitrogen	kg
+Phosphorous	kg
+PM10	kg
+PM25	kg
+SOx	kg
+NOx	kg
+Domestic Extraction Used - Crop and Crop Residue	kt
+Domestic Extraction Used - Grazing and Fodder	kt
+Domestic Extraction Used - Forestry and Timber	kt
+Domestic Extraction Used â Fisheries	kt
+Domestic Extraction Used - Non-metalic Minerals	kt
+Domestic Extraction Used - Iron Ore	kt
+Domestic Extraction Used - Non-ferous metal ores	kt
+Unused Domestic Extraction - Crop and Crop Residue	kt
+Unused Domestic Extraction - Grazing and Fodder	kt
+Unused Domestic Extraction - Forestry and Timber	kt
+Unused Domestic Extraction â Fisheries	kt
+Unused Domestic Extraction - Coal and Peat	kt
+Unused Domestic Extraction - Oil and Gas	kt
+Unused Domestic Extraction - Non-metalic Minerals	kt
+Unused Domestic Extraction - Iron Ore	kt
+Unused Domestic Extraction - Non-ferous metal ores	kt
+Land use Crop, Forest, Pasture	km2
