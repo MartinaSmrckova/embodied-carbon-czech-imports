@@ -6,12 +6,12 @@ World Integrated Trade Solution (WITS) database
 EXIOBASE
 
 ## Workflow
-Import raw trade data
-Import EXIOBASE emission factors
-Adjust for outliers in the emission factors
-Manually match HS6 categories to EXIOBASE product categories
-Match emission factors by country and product type
-Calculate embodied emissions
+1. Import raw trade data
+2. Import EXIOBASE emission factors
+3. Adjust for outliers in the emission factors
+4. Manually match HS6 categories to EXIOBASE product categories
+5. Match emission factors by country and product type
+6. Calculate embodied emissions
 
 For a detailed description of the methodology see:
 docs/emissions_methodology.md
