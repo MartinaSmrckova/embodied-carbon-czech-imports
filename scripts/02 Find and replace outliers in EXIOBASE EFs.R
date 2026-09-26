@@ -139,7 +139,7 @@ exio_factors_plus_outputs <- merge(
 )
 
 # Save merged dataset
-path2 <- here("data", "processed", "EXIO_factors_outputs.xlsx"))
+path2 <- here("data", "processed", "EXIO_factors_outputs.xlsx")
 write_xlsx(
   exio_factors_plus_outputs,
   path2
