@@ -139,9 +139,10 @@ exio_factors_plus_outputs <- merge(
 )
 
 # Save merged dataset
+path2 <- here("data", "processed", "EXIO_factors_outputs.xlsx"))
 write_xlsx(
   exio_factors_plus_outputs,
-  "C:/Users/Martina/Documents/Škola/Články/Carbon footprint 2025/Data/Scope 3U calculation/EXIO_factors_outputs.xlsx"
+  path2
 )
 
 # Split into time series by region–sector combination
