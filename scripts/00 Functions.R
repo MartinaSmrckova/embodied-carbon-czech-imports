@@ -152,3 +152,7 @@ Last6DropLeading0 <- function(x) {
   out
 }
 
+ExtractYear <- function(snapshot){
+  # This function extracts year from the snapshot name
+  as.numeric(substr(snapshot, 6, 9))
+}
