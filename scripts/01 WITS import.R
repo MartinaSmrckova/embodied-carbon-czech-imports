@@ -1,6 +1,8 @@
 ## =========================================================
-## 0) Load libraries
+## 0) Load functions and libraries
 ## =========================================================
+source("C:\\Users\\Martina\\Documents\\Práce\\Mezinárodní instituce\\OECD_2026_09\\embodied-carbon-czech-imports\\scripts\\00 Functions.R")
+
 library(readxl)
 library(dplyr)
 library(purrr)
