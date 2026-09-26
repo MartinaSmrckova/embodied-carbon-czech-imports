@@ -202,12 +202,12 @@ tot_im_topM <- list()
 
 for (snapshot in names(tot_dt_list)) {
   
-  DT <- copy(tot_dt_list[[snapshot]])   # pracuj s lokální kopií
+  DT <- copy(tot_dt_list[[snapshot]]) # work with a local copy
   
-  # ✅ řazení by reference
+  # Sort in place (by reference)
   setorder(DT, -`Trade Value EURm`)
   
-  # ✅ top M
+  # Keep the top M categories
   DT <- DT[1:HS6_TOP]
   
   top_HS6_colname <- paste("Top", HS6_TOP, "HS6", sep = "_")
@@ -215,7 +215,7 @@ for (snapshot in names(tot_dt_list)) {
   
   cols_to_keep <- c("HS6 ID", "HS6", "Year", top_HS6_colname)
   
-  # ✅ správný idiomatický výběr sloupců
+  # Select columns using the recommended data.table syntax
   DT <- DT[, ..cols_to_keep]
   
   tot_im_topM[[snapshot]] <- DT
@@ -271,9 +271,9 @@ for (snapshot in names(imp_by_year)){
 ## =============================================================================
 ## 7) Map EXIOBASE countries
 ## =============================================================================
-
+path4 <- here("data", "processed", "Countries_mapping.xlsx")
 exio_countries <- read_xlsx(
-  "C:/Users/Martina/Documents/Škola/Články/Carbon footprint 2025/Data/Scope 3U calculation/WITS_partners.xlsx"
+  path4
 )
 
 snapshots_countries <- list()
@@ -318,8 +318,7 @@ for (snapshot in names(snapshots_countries)) {
       all.x = TRUE
     )
   }
-    
-  
+      
   cols_to_keep <- c(
     "Year", "HS6 ID", "HS6",
     "EXIOBASE product", "country_origin",
@@ -328,7 +327,7 @@ for (snapshot in names(snapshots_countries)) {
     "EXIOBASE EF", "EF_outlier_high", "EF_outlier_low"
   )
   
-  # idiomatický výběr v data.table
+  # Select columns using data.table syntax
   snapshots_emis[[snapshot]] <- snapshots_emis[[snapshot]][, ..cols_to_keep]
 }
 
@@ -337,10 +336,12 @@ for (snapshot in names(snapshots_countries)) {
 ## =============================================================================
 
 # Import HICP
-data <- read_xlsx(
-  "C:/Users/Martina/Documents/Škola/Články/Carbon footprint 2025/Data/Data_CR.xlsx")
+path5 <- here("data", "raw", "Inflation", "HICP_EUR.xlsx")
 
-HICP <- data.frame(data$Year,data$HICP_EUR)
+data_HICP <- read_xlsx(
+  path5)
+
+HICP <- data.frame(data_HICP$Year,data$HICP_EUR)
 names(HICP) <- c("Year", "HICP")
 
 defl_2022_2023 <- HICP[HICP$Year == 2023,]$HICP / HICP[HICP$Year == 2022,]$HICP
