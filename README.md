@@ -47,6 +47,7 @@ outputs/
 ├── scope3u_results.xlsx
 └── scope3u_emissions
 ```
+
 ## Outputs
  
 The analysis produces:
