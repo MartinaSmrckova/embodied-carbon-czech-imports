@@ -1,32 +1,33 @@
 ## =========================================================
 ## 0) Load functions and libraries
 ## =========================================================
-source("C:\\Users\\Martina\\Documents\\Práce\\Mezinárodní instituce\\OECD_2026_09\\embodied-carbon-czech-imports\\scripts\\00 Functions.R")
-
+library(here)
 library(readxl)
 library(dplyr)
 library(purrr)
 library(data.table)
 library(writexl)
 
+source(here("scripts", "00 Functions.R"))
+
 ## =========================================================
 ## 1) Load trade data
 ## =========================================================
-path <- "C:\\Users\\Martina\\Documents\\Škola\\Články\\Carbon footprint 2025\\Data\\Scope 3U calculation\\WITS Imports"
-files <- list.files(path, pattern = "\\.csv$", full.names = TRUE)
-
+path <- here("data", "raw", "WITS Imports")
+files <- list.files(
+path = path,
+pattern = "\\.csv$",
+full.names = TRUE
+)
+ 
 imp_list <- list()
-
-for (i in 1:length(files)) {
-  imp_list[[i]] <- read.csv(files[i])
+ 
+for (i in seq_along(files)) {
+imp_list[[i]] <- read.csv(files[i])
 }
 
 # Clear the partner names
 imp_all <- data.table(do.call(rbind, imp_list))
-
-# unique_partners <- unique(imp_all[, c("PartnerName", "PartnerISO3")])
-# write_xlsx(unique_partners,
-          # "C:\\Users\\Martina\\Documents\\Škola\\Články\\Carbon footprint 2025\\Data\\Scope 3U calculation\\WITS_partners.xlsx")
 
 ## =========================================================
 ## 2) Delete data on unspecified partner countries and the
