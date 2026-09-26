@@ -30,17 +30,13 @@ docs/emissions_methodology.md
 
 ## Repository Structure
  
- ```text
+```text
 data/
-├── raw/ Original input data
-    ├── Exchange rates
-    ├── Exiobase emission factors
-    ├── Inflation
-    └── WITS Imports
-├── mappings/ Product and country correspondence tables
-├── processed/ Intermediate datasets
-└── auxiliary/ List of EXIOBASE categories that are out of scope
-
+├── raw/
+├── mappings/
+├── processed/
+└── auxiliary/
+ 
 docs/
 └── emissions_methodology.md
  
@@ -53,8 +49,15 @@ scripts/
  
 outputs/
 ├── scope3u_results.xlsx
-└── scope3u_emissions
+└── scope3u_emissions/
 ```
+
+### Main directories
+ 
+- `raw` contains original input datasets.
+- `mappings` contains manually created correspondence tables.
+- `processed` contains intermediate datasets generated during the workflow.
+- `auxiliary` contains supporting files used in the analysis.
 
 ## Outputs
  
@@ -71,6 +74,26 @@ outputs/scope3u_results.xlsx
 
 
 
-## Before running the analysis:
-1. Run `scripts/00_install_packages.R`
-2. To start the analysis, run `scripts/03 Scope 3U calculation.R`
+## Running the Analysis
+ 
+1. Install required packages:
+ 
+```r
+source("scripts/00_install_packages.R")
+```
+ 
+2. Run the full workflow:
+ 
+```r
+source("scripts/04_run_analysis.R")
+```
+ 
+The main script automatically executes all preprocessing and calculation steps.
+
+## Author
+ 
+Martina Smrčková
+ 
+PhD Candidate in Economics
+ 
+The repository was developed as part of doctoral research on greenhouse gas emissions and their determinants.
