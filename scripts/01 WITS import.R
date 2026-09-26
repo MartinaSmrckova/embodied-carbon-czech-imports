@@ -55,7 +55,7 @@ names(imp_all)[names(imp_all) == 'ProductCode'] <- 'HS6 ID'
 names(imp_all)[names(imp_all) == 'ProductDescription'] <- 'HS6'
 names(imp_all)[names(imp_all) == 'PartnerName'] <- 'country_origin'
 
-imp_all$`HS6 ID` <- last6_drop_leading0(imp_all$`HS6 ID`)
+imp_all$`HS6 ID` <- Last6DropLeading0(imp_all$`HS6 ID`)
 
 imp_all$EURm_kg <- imp_all$`Trade Value EURm` / imp_all$Quantity 
 

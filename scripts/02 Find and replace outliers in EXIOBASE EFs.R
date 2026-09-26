@@ -5,7 +5,7 @@
 # -----------------------------------------------------------------------------
 # Setup
 # -----------------------------------------------------------------------------
-source("C:/Users/Martina/Documents/Škola/Články/Carbon footprint 2025/Scripts/Functions.R")
+source("C:\\Users\\Martina\\Documents\\Práce\\Mezinárodní instituce\\OECD_2026_09\\embodied-carbon-czech-imports\\scripts\\00 Functions.R")
 
 library(dplyr)
 library(readxl)

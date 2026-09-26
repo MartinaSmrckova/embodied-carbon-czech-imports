@@ -12,10 +12,10 @@
 # -----------------------------------------------------------------------------
 # Setup
 # -----------------------------------------------------------------------------
-source("C:/Users/Martina/Documents/Škola/Články/Carbon footprint 2025/Scripts/Functions.R")
-source("C:/Users/Martina/Documents/Škola/Články/Carbon footprint 2025/Scripts/Scope 3U/0 WITS import.R")
-source("C:/Users/Martina/Documents/Škola/Články/Carbon footprint 2025/Scripts/Scope 3U/1 Find and replace outliers in EXIOBASE EFs.R")
-source("C:/Users/Martina/Documents/Škola/Články/Carbon footprint 2025/Scripts/Functions.R")
+#source("C:\\Users\\Martina\\Documents\\Práce\\Mezinárodní instituce\\OECD_2026_09\\embodied-carbon-czech-imports\\scripts\\00 Functions.R")
+source("C:\\Users\\Martina\\Documents\\Práce\\Mezinárodní instituce\\OECD_2026_09\\embodied-carbon-czech-imports\\scripts\\01 WITS import.R")
+source("C:\\Users\\Martina\\Documents\\Práce\\Mezinárodní instituce\\OECD_2026_09\\embodied-carbon-czech-imports\\scripts\\02 Find and replace outliers in EXIOBASE EFs.R")
+#source("C:\\Users\\Martina\\Documents\\Práce\\Mezinárodní instituce\\OECD_2026_09\\embodied-carbon-czech-imports\\scripts\\00 Functions.R")
 
 
 library(data.table)
@@ -260,7 +260,7 @@ for (snapshot in names(imp_by_year)){
   imp_by_year[[snapshot]] <- as.data.table(imp_by_year[[snapshot]])
   filtered_mapping <- as.data.table(filtered_mapping)
   
-  imp_by_year[[snapshot]][, `HS6 ID` := last6_drop_leading0(`HS6 ID`)]
+  imp_by_year[[snapshot]][, `HS6 ID` := Last6DropLeading0(`HS6 ID`)]
   
   snapshots_products[[snapshot]] <- merge(
     imp_by_year[[snapshot]], filtered_mapping,
