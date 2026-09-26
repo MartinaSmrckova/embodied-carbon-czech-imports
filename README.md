@@ -20,7 +20,7 @@ The EXIOBASE data included in the repository were reformatted to improve compati
 | 1 | Import trade data from WITS | `02_trade_data_import.R` |
 | 2 | Import EXIOBASE emission factors | `03_emission_factor_prep.R` |
 | 3 | Identify and adjust outliers in emission factors | `03_emission_factor_prep.R` |
-| 4 | Manually map the HS6 categories used in the WITS database to the EXIOBASE product categories | data/processed/Top_emission_HS6.xlsx
+| 4 | Manually map the HS6 categories used in the WITS database to the EXIOBASE product categories | data/mappings/Top_emission_HS6.xlsx
 | 5 | Match emission factors by country and product category | `04_run_analysis.R` |
 | 6 | Calculate embodied emissions | `04_run_analysis.R` |
 | 7 | Export final results | `04_run_analysis.R` |
