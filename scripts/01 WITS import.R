@@ -48,11 +48,11 @@ imp_all <- imp_all[!(imp_all$PartnerName %in% partners_to_del),]
 ## 3) Convert trade values from USD to EURm
 ## =========================================================
 # Load the data with exchange rates
-data <- read_xlsx("C:\\Users\\Martina\\Documents\\Škola\\Články\\Carbon footprint 2025\\Data\\Data_CR.xlsx")
+path1 <- here("data", "raw", "Exchange Rates", "EUR_USD.xlsx")
+er_data <- read_xlsx(path1)
 
-imp_all <- merge(imp_all, data[c("Year", "EUR_USD")], by = "Year", all.x = TRUE)
+imp_all <- merge(imp_all, er_data[c("Year", "EUR_USD")], by = "Year", all.x = TRUE)
 imp_all$TradeValue.in.1000.USD <- as.numeric(imp_all$TradeValue.in.1000.USD)
-
 
 imp_all$`Trade Value EURm` <- (imp_all$TradeValue.in.1000.USD * imp_all$EUR_USD)/1000
 
