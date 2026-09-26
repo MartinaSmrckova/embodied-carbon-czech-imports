@@ -57,6 +57,7 @@ The analysis produces:
 - Coverage statistics
 - Emission factor adjustment statistics
  
+
 Results are exported to:
  
 outputs/scope3u_results.xlsx
