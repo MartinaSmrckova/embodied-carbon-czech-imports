@@ -369,3 +369,15 @@ stats <- data.frame(name = c("Used EFs total",
 
 stats$pct <- stats$value / stats$value[1]
 stats$pct <- paste(round(stats$pct * 100, 2), "%", sep = "")
+
+## =============================================================================
+## 14) Give the message that the Scope 3U emissions ran succesfully
+## =============================================================================
+message(
+  cat(
+    "Total Scope 3U emissions in 2023:",
+    scope3u_Mt_CO2e_year$Scope3U_Mt_CO2e[
+      scope3u_Mt_CO2e_year$Year == 2023
+    ]
+  )
+)
