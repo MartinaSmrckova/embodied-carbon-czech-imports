@@ -15,3 +15,7 @@ EXIOBASE
 
 For a detailed description of the methodology see:
 docs/emissions_methodology.md
+
+## Before running the analysis:
+1. Run `scripts/00_install_packages.R`
+2. To start the analysis, run `scripts/03 Scope 3U calculation.R`
