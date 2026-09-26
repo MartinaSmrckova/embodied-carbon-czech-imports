@@ -144,7 +144,7 @@ unique_HS6 <- tot_im_topM_all[!duplicated(tot_im_topM_all$`HS6 ID`), ]
 ## =============================================================================
 ## 4) Load HS6–EXIOBASE mapping
 ## =============================================================================
-path3 <- here("data", "processed", "Top_emission_HS6.xlsx")
+path3 <- here("data", "mappings", "HS6_EXIOBASE_mapping.xlsx")
 HS6_EXIO_mapping <- read_xlsx(
   path3
 )
@@ -187,7 +187,7 @@ for (snapshot in names(imp_by_year)){
 ## =============================================================================
 ## 7) Map EXIOBASE countries
 ## =============================================================================
-path4 <- here("data", "processed", "Countries_mapping.xlsx")
+path4 <- here("data", "mappings", "Countries_mapping.xlsx")
 exio_countries <- read_xlsx(
   path4
 )
