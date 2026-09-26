@@ -30,6 +30,10 @@ docs/emissions_methodology.md
  ```text
 data/
 ├── raw/ Original input data
+    ├── Exchange rates
+    ├── Exiobase emission factors
+    ├── Inflation
+    └── WITS Imports
 ├── mappings/ Product and country correspondence tables
 ├── processed/ Intermediate datasets
 └── auxiliary/ List of EXIOBASE categories that are out of scope
