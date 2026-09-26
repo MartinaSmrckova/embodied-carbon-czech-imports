@@ -1,5 +1,6 @@
 # Embodied emissions in imports (Scope 3 upstream) to the Czech Republic
-This repository contains scripts and data used to estimate greenhouse gas emissions embodied in imports to the Czech Republic. The calculated emissions are used for my research estimating relationships among emission scopes as defined by the GHG Protocol and their determinants.
+This repository contains data, scripts and documentation used to estimate greenhouse gas emissions embodied in imports to the Czech Republic.
+The resulting Scope 3 upstream emissions estimates are used in my doctoral research examining the relationships among GHG Protocol emission scopes and their determinants.
 
 ## Background
 The GHG Protocol (2004) distinguishes emissions according to their relationship to the reporting entity: Scope 1 covers direct emissions from sources controlled by the entity; Scope 2 covers indirect emissions from purchased energy; and Scope 3 covers other indirect value chain emissions. 
