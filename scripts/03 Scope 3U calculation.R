@@ -73,7 +73,7 @@ for (snapshot in names(exio_factors_adj)) {
     FUN = function(x) mean(x, na.rm = TRUE)
   )
   
-  avg_ef_by_sector$Year <- as.numeric(substr(snapshot, 6, 9))
+  avg_ef_by_sector$Year <- ExtractYear(snapshot)
   avg_ef_by_sector_list[[snapshot]] <- avg_ef_by_sector
   
   # 4) Drop sectors outside the analytical scope
@@ -93,7 +93,7 @@ for (snapshot in names(exio_factors_adj)) {
   # 6) Select top N sectors (robust to small sample size)
   n_top <- min(N_TOP, nrow(avg_ef_by_sector_clean))
   top_N <- head(avg_ef_by_sector_clean, n_top)
-  top_N$Year <- as.numeric(substr(snapshot, 6, 9))
+  top_N$Year <- ExtractYear(snapshot)
   
   top_N_ef[[snapshot]] <- top_N
   rownames(top_N_ef[[snapshot]]) <- NULL
@@ -210,7 +210,7 @@ for (snapshot in names(snapshots_products)) {
 snapshots_emis <- list()
 
 for (snapshot in names(snapshots_countries)) {
-  year_n <- as.numeric(substr(snapshot, 6, 9))
+  year_n <- ExtractYear(snapshot)
   
   if (year_n > 2022) {
     snapshots_emis[[snapshot]] <- merge(
