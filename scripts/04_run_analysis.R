@@ -9,7 +9,7 @@
 ###############################################################################
 
 ## =============================================================================
-## 0) Load libraries and run predecessing scripts
+## 0) Load libraries and run run the preceding scripts
 ## =============================================================================
 library(here)
 library(data.table)
@@ -18,9 +18,9 @@ library(writexl)
 library(tidyverse)
 library(ggplot2)
 
-source(here("scripts", "00 Functions.R"))
-source(here("scripts", "01 WITS import.R"))
-source(here("scripts", "02 Find and replace outliers in EXIOBASE EFs.R"))
+source(here("scripts", "01_functions.R"))
+source(here("scripts", "02_trade_data_import.R"))
+source(here("scripts", "03_emission_factor_prep.R"))
 
 ## =============================================================================
 ## 1) User-defined settings

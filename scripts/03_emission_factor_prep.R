@@ -13,7 +13,7 @@ library(writexl)
 library(data.table)
 library(tseries)
 
-source(here("scripts", "00 Functions.R"))
+source(here("scripts", "01_functions.R"))
 
 ## =============================================================================
 ## 0) Outlier detection settings (user-adjustable)
