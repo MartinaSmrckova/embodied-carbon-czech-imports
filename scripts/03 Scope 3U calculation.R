@@ -2,12 +2,11 @@
 # This script identifies the most emission-intensive EXIOBASE sectors,
 # maps them to HS6 product categories and countries, and calculates
 # Scope 3U emissions by year.
-###############################################################################
 # This script includes all HS6 categories that were in the top N in any year or
 # that correspond to the EXIOBASE emission factors that were in top N in any
 # year regardless of whether the HS6 category or EF was in the top N in the
 # respective year.
-
+###############################################################################
 
 ## =============================================================================
 ## 0) Load libraries and run predecessing scripts
