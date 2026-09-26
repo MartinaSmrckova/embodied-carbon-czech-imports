@@ -5,14 +5,15 @@
 # -----------------------------------------------------------------------------
 # Setup
 # -----------------------------------------------------------------------------
-source("C:\\Users\\Martina\\Documents\\Práce\\Mezinárodní instituce\\OECD_2026_09\\embodied-carbon-czech-imports\\scripts\\00 Functions.R")
-
+library(here)
 library(dplyr)
 library(readxl)
 library(stringr)
 library(writexl)
 library(data.table)
 library(tseries)
+
+source(here("scripts", "00 Functions.R"))
 
 ## =============================================================================
 ## 0) Outlier detection settings (user-adjustable)
