@@ -398,3 +398,33 @@ write_xlsx(
   results,
   here("outputs", "scope3u_results.xlsx")
 )
+
+## =============================================================================
+## 16) Create a report with the results
+## =============================================================================
+report <- c(
+  "# Scope 3U calculation results",
+  "",
+  paste(
+    "Total Scope 3U emissions in 2023:",
+    round(
+      scope3u_Mt_CO2e_year$Scope3U_Mt_CO2e[
+        scope3u_Mt_CO2e_year$Year == 2023
+      ],
+      2
+    ),
+    "Mt CO2e"
+  ),
+  "",
+  "## Emission-factor diagnostics",
+  "",
+  paste(
+    "Unique emission factors used:",
+    unique_EF_num
+  )
+)
+ 
+writeLines(
+  report,
+  here("outputs", "results_summary.md")
+)
