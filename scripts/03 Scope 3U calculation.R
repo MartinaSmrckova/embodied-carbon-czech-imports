@@ -9,9 +9,9 @@
 # respective year.
 
 
-# -----------------------------------------------------------------------------
-# Setup
-# -----------------------------------------------------------------------------
+## =============================================================================
+## 0) Load libraries and run predecessing scripts
+## =============================================================================
 library(here)
 library(data.table)
 library(readxl)
@@ -21,8 +21,9 @@ library(tidyverse)
 source(here("scripts", "00 Functions.R"))
 source(here("scripts", "01 WITS import.R"))
 source(here("scripts", "02 Find and replace outliers in EXIOBASE EFs.R"))
+
 ## =============================================================================
-## 0) User-defined settings
+## 1) User-defined settings
 ## =============================================================================
 
 ## Number of most emission-intensive sectors to retain per year
@@ -32,7 +33,7 @@ N_TOP <- 60
 HS6_TOP <- 200
 
 ## =============================================================================
-## 1) Identify the most emission-intensive EXIOBASE sectors
+## 2) Identify the most emission-intensive EXIOBASE sectors
 ## =============================================================================
 
 # Split adjusted EXIOBASE data by year
@@ -192,7 +193,7 @@ rownames(top_N_all) <- NULL
 unique_sectors <- top_N_all[!duplicated(top_N_all$sector), ]
 
 ## =============================================================================
-## 2) Identify the HS6 categories with the highest trade value
+## 3) Identify the HS6 categories with the highest trade value
 ## =============================================================================
 
 tot_dt_list <- imp_by_year
@@ -226,7 +227,7 @@ tot_im_topM_all <- do.call(rbind, tot_im_topM)
 unique_HS6 <- tot_im_topM_all[!duplicated(tot_im_topM_all$`HS6 ID`), ]
 
 ## =============================================================================
-## 3) Load HS6–EXIOBASE mapping
+## 4) Load HS6–EXIOBASE mapping
 ## =============================================================================
 
 HS6_EXIO_mapping <- read_xlsx(
@@ -234,7 +235,7 @@ HS6_EXIO_mapping <- read_xlsx(
 )
 
 ## =============================================================================
-## 4) Map HS6 categories to top EXIOBASE product categories by year
+## 5) Map HS6 categories to top EXIOBASE product categories by year
 ## =============================================================================
 unique_HS6$`HS6 ID` <- substr(unique_HS6 $`HS6 ID`,
                               nchar(unique_HS6 $`HS6 ID`) - 5,
@@ -249,7 +250,7 @@ filtered_mapping <- HS6_EXIO_mapping[
 ]
 
 ## =============================================================================
-## 5) Map EXIOBASE products to HS6 trade data
+## 6) Map EXIOBASE products to HS6 trade data
 ## =============================================================================
 
 snapshots_products <- list()
@@ -269,7 +270,7 @@ for (snapshot in names(imp_by_year)){
 }
 
 ## =============================================================================
-## 6) Map EXIOBASE countries
+## 7) Map EXIOBASE countries
 ## =============================================================================
 
 exio_countries <- read_xlsx(
@@ -289,7 +290,7 @@ for (snapshot in names(snapshots_products)) {
 }
 
 ## =============================================================================
-## 7) Map EXIOBASE emission factors
+## 8) Map EXIOBASE emission factors
 ## =============================================================================
 
 snapshots_emis <- list()
@@ -333,7 +334,7 @@ for (snapshot in names(snapshots_countries)) {
 }
 
 ## =============================================================================
-## 8) Reprice the 2022 EFs used in 2023
+## 9) Reprice the 2022 EFs used in 2023
 ## =============================================================================
 
 # Import HICP
@@ -349,7 +350,7 @@ snapshots_emis[["year_2023"]]$`EXIOBASE EF` <-
   snapshots_emis[["year_2023"]]$`EXIOBASE EF` / defl_2022_2023
 
 ## =============================================================================
-## 9) Calculate Scope 3U emissions by product and country
+## 10) Calculate Scope 3U emissions by product and country
 ## =============================================================================
 
 for (snapshot in names(snapshots_emis)) {
@@ -366,7 +367,7 @@ for (snapshot in names(snapshots_emis)) {
 }
 
 ## =============================================================================
-## 10) Calculate total Scope 3U emissions by year
+## 11) Calculate total Scope 3U emissions by year
 ## =============================================================================
 
 scope3u_Mt_CO2e <- numeric(length(snapshots_emis))
@@ -381,7 +382,7 @@ scope3u_Mt_CO2e_year <- data.frame(
 )
 
 ## =============================================================================
-## 10) Calculate import coverage for each year
+## 12) Calculate import coverage for each year
 ## =============================================================================
 
 im_covered <- list()
@@ -399,7 +400,7 @@ for (snapshot in names(imp_by_year)) {
 }
 
 ## =============================================================================
-## 11) Calculate the imputation statistics
+## 13) Calculate the imputation statistics
 ## =============================================================================
 snapshots_emis_df <- do.call(rbind, snapshots_emis)
 
