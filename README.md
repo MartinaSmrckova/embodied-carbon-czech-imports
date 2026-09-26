@@ -92,8 +92,8 @@ The main script automatically executes all preprocessing and calculation steps.
 
 ## Author
  
-Martina Smrčková
- 
+Martina Smrckova
+
 PhD Candidate in Economics
  
 The repository was developed as part of doctoral research on greenhouse gas emissions and their determinants.
