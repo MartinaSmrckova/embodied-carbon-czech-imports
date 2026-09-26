@@ -5,14 +5,15 @@
 # -----------------------------------------------------------------------------
 # Setup
 # -----------------------------------------------------------------------------
-source("C:\\Users\\Martina\\Documents\\Práce\\Mezinárodní instituce\\OECD_2026_09\\embodied-carbon-czech-imports\\scripts\\00 Functions.R")
-
+library(here)
 library(dplyr)
 library(readxl)
 library(stringr)
 library(writexl)
 library(data.table)
 library(tseries)
+
+source(here("scripts", "00 Functions.R"))
 
 ## =============================================================================
 ## 0) Outlier detection settings (user-adjustable)
@@ -30,7 +31,7 @@ a_jb <- 0.05
 # - Expected columns: region, sector, GHG emissions
 
 # Root folder containing IOT_1995_pxp, IOT_1996_pxp, ... directories
-root_dir <- "C:/Users/Martina/Documents/Škola/Články/Carbon footprint 2025/Data/Scope 3U calculation/Exiobase emission factors/Starší verze"
+root_dir <- here("data", "raw", "Exiobase emission factors")
 
 # Pattern for IOT folders (IOT_YYYY_pxp)
 dir_regex <- "^IOT_\\d{4}_pxp$"
