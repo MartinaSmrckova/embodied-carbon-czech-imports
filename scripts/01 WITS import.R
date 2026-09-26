@@ -1,12 +1,17 @@
+## =========================================================
+## 0) Load libraries
+## =========================================================
 library(readxl)
 library(dplyr)
 library(purrr)
 library(data.table)
 library(writexl)
 
+## =========================================================
+## 1) Load trade data
+## =========================================================
 path <- "C:\\Users\\Martina\\Documents\\Škola\\Články\\Carbon footprint 2025\\Data\\Scope 3U calculation\\WITS Imports"
 files <- list.files(path, pattern = "\\.csv$", full.names = TRUE)
-
 
 imp_list <- list()
 
@@ -21,6 +26,10 @@ imp_all <- data.table(do.call(rbind, imp_list))
 # write_xlsx(unique_partners,
           # "C:\\Users\\Martina\\Documents\\Škola\\Články\\Carbon footprint 2025\\Data\\Scope 3U calculation\\WITS_partners.xlsx")
 
+## =========================================================
+## 2) Delete data on unspecified partner countries and the
+##    Czech Republic
+## =========================================================
 partners_to_del <- c("World",
                      " World",
                      "Czech Republic",
@@ -66,6 +75,9 @@ names(imp_by_year) <- paste("year", names(imp_by_year), sep = "_")
 ## =========================================================
 ## 4) Add missing values for Russian natural gas in 2005
 ## =========================================================
+# The data on natural gas imports in 2005 were missing from the WITS database
+# for unknown reasons. I got the supplementary information on imported volumes
+# from the Energy Regulatory Office of the Czech Republic.
 gas_RU_m3 <- 7020000000
 gas_NO_m3 <- 2338000000
 
@@ -78,8 +90,7 @@ gas_dens_NO <- 0.802
 gas_RU_kg <- gas_RU_m3 * gas_dens_RU
 gas_NO_kg <- gas_NO_m3 * gas_dens_NO
   
-
-
+# Imputate the data
 gas_RU <- data.frame(
   Year = "2005",
   ReporterISO3 = "CZE",
@@ -113,16 +124,13 @@ gas_NO <- data.frame(
 )
 
 colnames(gas_NO) <- colnames(imp_by_year$year_2005)
-
-
 imp_by_year$year_2005 <- rbind(imp_by_year$year_2005,
                                gas_RU,
                                gas_NO)
 
-
 imp_by_year$year_2005$Year <- as.numeric(imp_by_year$year_2005$Year)
 
-# Imput the import values in RU and NO natural gas
+# Imputate the import values in RU and NO natural gas
 imp_by_year_all <- (do.call(rbind, imp_by_year)) 
 
 imp_by_product <- split(
@@ -133,7 +141,6 @@ imp_by_product <- split(
   ),
   drop = TRUE
 )
-
 
 imp_by_product[["Russian Federation.271121"]]$EURm_kg[11] <-
   mean(c(imp_by_product[["Russian Federation.271121"]]$EURm_kg[10],
