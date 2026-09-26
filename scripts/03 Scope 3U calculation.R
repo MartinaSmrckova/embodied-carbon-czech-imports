@@ -16,6 +16,7 @@ library(data.table)
 library(readxl)
 library(writexl)
 library(tidyverse)
+library(ggplot2)
 
 source(here("scripts", "00 Functions.R"))
 source(here("scripts", "01 WITS import.R"))
@@ -400,31 +401,43 @@ write_xlsx(
 )
 
 ## =============================================================================
-## 16) Create a report with the results
+## 16) Generate graph with resulting emissions
 ## =============================================================================
-report <- c(
-  "# Scope 3U calculation results",
-  "",
-  paste(
-    "Total Scope 3U emissions in 2023:",
-    round(
-      scope3u_Mt_CO2e_year$Scope3U_Mt_CO2e[
-        scope3u_Mt_CO2e_year$Year == 2023
-      ],
-      2
+ggplot(
+  scope3u_Mt_CO2e_year,
+  aes(x = Year, y = Scope3U_Mt_CO2e)
+) +
+  geom_line(
+    colour = "#2C7FB8",
+    linewidth = 1.2
+  ) +
+  geom_point(
+    colour = "#2C7FB8",
+    size = 1.8
+  ) +
+  labs(
+    title = "Scope 3 Upstream Emissions Associated with Czech Imports",
+    subtitle = "Estimated using EXIOBASE emission factors and WITS trade data",
+    x = "Year",
+    y = "Scope 3 upstream emissions (Mt CO2e) - Czech Republic"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(
+      face = "bold",
+      size = 14
     ),
-    "Mt CO2e"
-  ),
-  "",
-  "## Emission-factor diagnostics",
-  "",
-  paste(
-    "Unique emission factors used:",
-    unique_EF_num
+    plot.subtitle = element_text(
+      size = 11
+    ),
+    axis.title = element_text(
+      face = "bold"
+    ),
+    panel.grid.minor = element_blank()
   )
-)
 
-writeLines(
-  report,
-  here("outputs", "results_summary.md")
+ggsave(
+  here("outputs", "figures", "scope3u_emissions.png"),
+  width = 8,
+  height = 5
 )
