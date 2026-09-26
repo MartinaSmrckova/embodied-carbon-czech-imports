@@ -31,7 +31,7 @@ a_jb <- 0.05
 # - Expected columns: region, sector, GHG emissions
 
 # Root folder containing IOT_1995_pxp, IOT_1996_pxp, ... directories
-root_dir <- "C:/Users/Martina/Documents/Škola/Články/Carbon footprint 2025/Data/Scope 3U calculation/Exiobase emission factors/Starší verze"
+root_dir <- here("data", "raw", "Exiobase emission factors")
 
 # Pattern for IOT folders (IOT_YYYY_pxp)
 dir_regex <- "^IOT_\\d{4}_pxp$"
