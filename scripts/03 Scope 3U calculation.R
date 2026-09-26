@@ -393,7 +393,7 @@ results <- list(
   ),
   ef_statistics = stats
 )
- 
+
 write_xlsx(
   results,
   here("outputs", "scope3u_results.xlsx")
@@ -423,7 +423,7 @@ report <- c(
     unique_EF_num
   )
 )
- 
+
 writeLines(
   report,
   here("outputs", "results_summary.md")
