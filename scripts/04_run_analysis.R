@@ -257,7 +257,7 @@ path5 <- here("data", "raw", "Inflation", "HICP_EUR.xlsx")
 data_HICP <- read_xlsx(
   path5)
 
-HICP <- data.frame(data_HICP$Year,data$HICP_EUR)
+HICP <- data.frame(data_HICP$Year, data_HICP$HICP_EUR)
 names(HICP) <- c("Year", "HICP")
 
 defl_2022_2023 <- HICP[HICP$Year == 2023,]$HICP / HICP[HICP$Year == 2022,]$HICP
