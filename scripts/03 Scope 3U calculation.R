@@ -12,17 +12,15 @@
 # -----------------------------------------------------------------------------
 # Setup
 # -----------------------------------------------------------------------------
-#source("C:\\Users\\Martina\\Documents\\Práce\\Mezinárodní instituce\\OECD_2026_09\\embodied-carbon-czech-imports\\scripts\\00 Functions.R")
-source("C:\\Users\\Martina\\Documents\\Práce\\Mezinárodní instituce\\OECD_2026_09\\embodied-carbon-czech-imports\\scripts\\01 WITS import.R")
-source("C:\\Users\\Martina\\Documents\\Práce\\Mezinárodní instituce\\OECD_2026_09\\embodied-carbon-czech-imports\\scripts\\02 Find and replace outliers in EXIOBASE EFs.R")
-#source("C:\\Users\\Martina\\Documents\\Práce\\Mezinárodní instituce\\OECD_2026_09\\embodied-carbon-czech-imports\\scripts\\00 Functions.R")
-
-
+library(here)
 library(data.table)
 library(readxl)
 library(writexl)
 library(tidyverse)
 
+source(here("scripts", "00 Functions.R"))
+source(here("scripts", "01 WITS import.R"))
+source(here("scripts", "02 Find and replace outliers in EXIOBASE EFs.R"))
 ## =============================================================================
 ## 0) User-defined settings
 ## =============================================================================
