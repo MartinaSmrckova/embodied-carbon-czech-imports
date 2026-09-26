@@ -117,23 +117,23 @@ tot_im_topM <- list()
 
 for (snapshot in names(tot_dt_list)) {
   
-  DT <- copy(tot_dt_list[[snapshot]]) # work with a local copy
+  trade_data_year <- copy(tot_dt_list[[snapshot]]) # work with a local copy
   
   # Sort in place (by reference)
-  setorder(DT, -`Trade Value EURm`)
+  setorder(trade_data_year, -`Trade Value EURm`)
   
   # Keep the top M categories
-  DT <- DT[1:HS6_TOP]
+  trade_data_year <- trade_data_year[1:HS6_TOP]
   
   top_HS6_colname <- paste("Top", HS6_TOP, "HS6", sep = "_")
-  DT[, (top_HS6_colname) := "Yes"]
+  trade_data_year[, (top_HS6_colname) := "Yes"]
   
   cols_to_keep <- c("HS6 ID", "HS6", "Year", top_HS6_colname)
   
   # Select columns using the recommended data.table syntax
-  DT <- DT[, ..cols_to_keep]
+  trade_data_year <- trade_data_year[, ..cols_to_keep]
   
-  tot_im_topM[[snapshot]] <- DT
+  tot_im_topM[[snapshot]] <- trade_data_year
 }
 
 # Get unique HS6 categories that were in the top M in any year
