@@ -271,9 +271,9 @@ for (snapshot in names(imp_by_year)){
 ## =============================================================================
 ## 7) Map EXIOBASE countries
 ## =============================================================================
-
+path4 <- here("data", "processed", "Countries_mapping.xlsx")
 exio_countries <- read_xlsx(
-  "C:/Users/Martina/Documents/Škola/Články/Carbon footprint 2025/Data/Scope 3U calculation/WITS_partners.xlsx"
+  path4
 )
 
 snapshots_countries <- list()
@@ -318,8 +318,7 @@ for (snapshot in names(snapshots_countries)) {
       all.x = TRUE
     )
   }
-    
-  
+      
   cols_to_keep <- c(
     "Year", "HS6 ID", "HS6",
     "EXIOBASE product", "country_origin",
@@ -337,10 +336,12 @@ for (snapshot in names(snapshots_countries)) {
 ## =============================================================================
 
 # Import HICP
-data <- read_xlsx(
-  "C:/Users/Martina/Documents/Škola/Články/Carbon footprint 2025/Data/Data_CR.xlsx")
+path5 <- here("data", "raw", "Inflation", "HICP_EUR.xlsx")
 
-HICP <- data.frame(data$Year,data$HICP_EUR)
+data_HICP <- read_xlsx(
+  path5)
+
+HICP <- data.frame(data_HICP$Year,data$HICP_EUR)
 names(HICP) <- c("Year", "HICP")
 
 defl_2022_2023 <- HICP[HICP$Year == 2023,]$HICP / HICP[HICP$Year == 2022,]$HICP
