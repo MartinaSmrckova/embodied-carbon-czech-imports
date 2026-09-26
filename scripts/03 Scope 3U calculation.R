@@ -419,7 +419,7 @@ ggplot(
     title = "Scope 3 Upstream Emissions Associated with Czech Imports",
     subtitle = "Estimated using EXIOBASE emission factors and WITS trade data",
     x = "Year",
-    y = "Scope 3 upstream emissions (Mt CO2e) - Czech Republic"
+    y = "Scope 3 upstream emissions (Mt CO2e)"
   ) +
   theme_minimal(base_size = 12) +
   theme(
@@ -437,7 +437,7 @@ ggplot(
   )
 
 ggsave(
-  here("outputs", "figures", "scope3u_emissions.png"),
+  here("outputs", "scope3u_emissions.png"),
   width = 8,
   height = 5
 )
