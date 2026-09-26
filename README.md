@@ -11,6 +11,8 @@ World Integrated Trade Solution (WITS) database
 
 EXIOBASE
 
+The EXIOBASE data included in the repository were reformatted to improve compatibility with the analysis scripts. No methodological modifications were applied at this stage.
+
 ## Workflow
 | Step | Description | Script |
 |-------|-------------|---------|
