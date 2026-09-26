@@ -19,9 +19,9 @@ path = path,
 pattern = "\\.csv$",
 full.names = TRUE
 )
- 
+
 imp_list <- list()
- 
+
 for (i in seq_along(files)) {
 imp_list[[i]] <- read.csv(files[i])
 }
