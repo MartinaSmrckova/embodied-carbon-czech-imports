@@ -381,3 +381,20 @@ message(
     ]
   )
 )
+
+## =============================================================================
+## 15) Export the results
+## =============================================================================
+results <- list(
+  scope3u_emissions = scope3u_Mt_CO2e_year,
+  coverage = data.frame(
+    Year = 1995:2023,
+    Coverage = unlist(coverage_shares)
+  ),
+  ef_statistics = stats
+)
+ 
+write_xlsx(
+  results,
+  here("outputs", "scope3u_results.xlsx")
+)
