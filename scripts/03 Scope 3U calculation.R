@@ -228,9 +228,9 @@ unique_HS6 <- tot_im_topM_all[!duplicated(tot_im_topM_all$`HS6 ID`), ]
 ## =============================================================================
 ## 4) Load HS6–EXIOBASE mapping
 ## =============================================================================
-
+path3 <- here("data", "processed", "Top_emission_HS6.xlsx")
 HS6_EXIO_mapping <- read_xlsx(
-  "C:/Users/Martina/Documents/Škola/Články/Carbon footprint 2025/Data/Scope 3U calculation/Top_emission_HS6.xlsx"
+  path3
 )
 
 ## =============================================================================
