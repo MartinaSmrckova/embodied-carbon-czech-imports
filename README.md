@@ -26,7 +26,8 @@ For a detailed description of the methodology see:
 docs/emissions_methodology.md
 
 ## Repository Structure
- ```text
+ 
+ ```text
 data/
 ├── raw/ Original input data
 ├── mappings/ Product and country correspondence tables
