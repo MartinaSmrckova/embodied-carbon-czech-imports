@@ -1,3 +1,13 @@
+###############################################################################
+# Functions
+#
+# This script loads all custom functiona required to reproduce the analysis
+# presented in this repository.
+#
+# Author: Martina Smrckova
+# Project: Emissions Embodied in Czech Imports
+###############################################################################
+
 DetectNormality <- function(df, var, jb_thresh, norm_name){
   # This function detects whether a variable in a dataset is normal based on
   # Jarque-Bera test. A new variable is created saying whether the time series
