@@ -6,7 +6,7 @@
 #
 # Users only need to run this script once before executing the main workflow.
 #
-# Author: Martina Smrčková
+# Author: Martina Smrckova
 # Project: Emissions Embodied in Czech Imports
 ###############################################################################
 
