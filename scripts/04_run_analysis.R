@@ -10,12 +10,18 @@
 # year regardless of whether the HS6 category or EF was in the top N in the
 # respective year.
 #
+# Outputs:
+# - scope3u_results. xlsx: contains the calculated emissions, import coverage ratios,
+#   and statistics on how many emission factors used were adjusted by the script
+#   03_emission_factor_prep
+# - scope3u_emissions.png: plot of calculated emissions development in time.
+#
 # Author: Martina Smrckova
 # Project: Emissions Embodied in Czech Imports
 ###############################################################################
 
 ## =============================================================================
-## 0) Load libraries and run run the preceding scripts
+## 0) Load libraries and run the preceding scripts
 ## =============================================================================
 library(here)
 library(data.table)
