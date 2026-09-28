@@ -1,10 +1,16 @@
 ###############################################################################
-# This script finds outliers in EXIOBASE emission factors and replaces them.
+# Emission factor data preparation
+#
+# This script finds outliers in EXIOBASE emission factors and replaces them
+# according to the rules described in docs/emissions_methodology.md.
+#
+# Author: Martina Smrckova
+# Project: Emissions Embodied in Czech Imports
 ###############################################################################
 
-# -----------------------------------------------------------------------------
-# Setup
-# -----------------------------------------------------------------------------
+## =============================================================================
+## 0) Load libraries and functions
+## =============================================================================
 library(here)
 library(dplyr)
 library(readxl)
@@ -16,7 +22,7 @@ library(tseries)
 source(here("scripts", "01_functions.R"))
 
 ## =============================================================================
-## 0) Outlier detection settings (user-adjustable)
+## 1) Outlier detection settings (user-adjustable)
 ## =============================================================================
 
 # Jarque-bera test significance
@@ -24,7 +30,7 @@ a_jb <- 0.05
 
 
 ## =============================================================================
-## 1) Import EXIOBASE emission factors and outputs
+## 2) Import EXIOBASE emission factors and outputs
 ## =============================================================================
 # Note:
 # - The S tables must be converted to .xlsx and transposed beforehand
@@ -49,7 +55,6 @@ iot_dirs <- all_children[grepl(dir_regex, basename(all_children))]
 if (length(iot_dirs) == 0L) {
   stop("No folders matching 'IOT_YYYY_pxp' found under: ", root_dir)
 }
-
 
 # ---- Build paths to impacts/S.xlsx -------------------------------------------
 
@@ -117,9 +122,8 @@ for (i in seq_along(x_paths_exist)) {
 
 names(exio_outputs) <- names(exio_factors)
 
-
 ## =============================================================================
-## 2) Merge emission factors and outputs
+## 3) Merge emission factors and outputs
 ## =============================================================================
 
 # Add year information to outputs
@@ -156,7 +160,7 @@ exio_factors_plus_outputs_list <- split(
 )
 
 ## =============================================================================
-## 3) Test normality of EF and output series
+## 4) Test normality of emission factors and output series
 ## =============================================================================
 
 EF_normal <- list()
@@ -189,8 +193,10 @@ for (series in names(exio_factors_plus_outputs_list)) {
 }
 
 ## =============================================================================
-## 4) Detect outliers
+## 5) Detect outliers
 ## =============================================================================
+
+# Create lists of emission factors based on numbers of outliers.
 
 EF_outliers_0 <- list()
 EF_outliers_1 <- list()
@@ -237,7 +243,7 @@ for (series in names(exio_factors_plus_outputs_list)) {
 }
 
 ## =============================================================================
-## 5) Imputate the outliers
+## 6) Imputate the outliers
 ## =============================================================================
 
 exio_factors_plus_outputs_list_adj <- exio_factors_plus_outputs_list
@@ -308,7 +314,7 @@ for (series in names(EF_outliers_more)) {
 }
 
 ## =============================================================================
-## 5) Imputate negative emission factors
+## 7) Imputate negative emission factors
 ## =============================================================================
 EF_negative <- list()
 EF_no_negative <- list()
@@ -345,7 +351,7 @@ for (series in names(EF_negative)) {
 }
 
 ## =============================================================================
-## 6) Imputate zero emission factors
+## 8) Imputate zero emission factors
 ## =============================================================================
 
 ## Calculate the sector-year averages
