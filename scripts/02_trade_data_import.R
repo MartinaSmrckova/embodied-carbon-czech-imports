@@ -1,3 +1,15 @@
+###############################################################################
+# Trade data import
+#
+# This script loads and prepares the data on imports to the Czech Republic
+# from the WITH database needed for the calculation of embodied emissions
+# in Czech imports. This script does not need to be run separately,
+# the script 04_run_analysis runs this script automatically.
+#
+# Author: Martina Smrckova
+# Project: Emissions Embodied in Czech Imports
+###############################################################################
+
 ## =========================================================
 ## 0) Load functions and libraries
 ## =========================================================
